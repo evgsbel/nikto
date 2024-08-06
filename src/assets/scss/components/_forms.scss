@@ -1,0 +1,186 @@
+.form {
+  &__input,
+  &__textarea {
+    background-color: #fff;
+    height: 60px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding: 0 10px 0 20px;
+    font-size: 0.875rem;
+    border: none;
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid $purple;
+    }
+    &::placeholder {
+      color: $black;
+      font-size: 0.875rem;
+    }
+  }
+  &__textarea {
+    padding-top: 40px;
+    height: 100px;
+    border-radius: 100px;
+    resize: none;
+  }
+  &__submit {
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+
+
+.conf {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #fff;
+    @include r(576) {
+      line-height: 1;
+    }
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  &__input {
+    display: none;
+  }
+  &__input + &__pane {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+  &__input + &__pane::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    left: 0;
+    margin: 0 auto;
+    width: 16px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 8L4.25 11.25L14.5 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+  &__input:checked + .conf__pane::before {
+    opacity: 1;
+  }
+  &__input:checked + .conf__pane + i {
+    font-weight: 700;
+  }
+}
+
+.modal-content {
+  background-image: url('../img/modal-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+}
+.modal-dialog {
+  position: relative;
+  width: 964px;
+  max-width: 90%;
+}
+.modal {
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  button.close {
+    background-color: #fff;
+  }
+  .close {
+    color: $purple;
+    opacity: 1 !important;
+    text-shadow: none;
+    &:hover {
+      opacity: 0.7 !important;
+    }
+  }
+}
+
+.popup-form {
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 55px;
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 70px;
+  }
+  &__info {
+    padding-right: 80px;
+  }
+  &__checkers {
+    position: relative;
+    flex: 0 0 50%;
+    padding-left: 80px;
+    padding-top: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 51.89%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+  &__caption {
+    font-weight: 500;
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+  &__description {
+    max-width: 303px;
+    b {
+      font-weight: 500;
+      font-size: 22px;
+    }
+  }
+  &__check {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    i {
+      font-size: 22px;
+      font-style: normal;
+    }
+    .conf__input + .conf__pane {
+      top: 3px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  &__input {
+    width: 278px;
+  }
+  &__textarea {
+    width: 495px;
+    max-width: 100%;
+  }
+  &__conf {
+    margin: 0 5px;
+    max-width: 197px;
+  }
+}
+

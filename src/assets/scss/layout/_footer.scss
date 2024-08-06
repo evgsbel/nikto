@@ -1,0 +1,149 @@
+.footer {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 35px;
+  background-image: url('../img/footer-bg.jpg');
+  background-size: cover;
+  &__col {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__caption {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__item {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__nav-link {
+    font-size: 0.875rem;
+    transition: color $trns;
+    @include r(1367) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: $purple2;
+      text-decoration: underline;
+    }
+  }
+  &__contact {
+    font-size: 0.875rem;
+    display: block;
+    b {
+      font-weight: 500;
+    }
+  }
+  &__address {
+    margin-bottom: 0;
+  }
+  &__link {
+    text-decoration: underline;
+  }
+  &__logo {
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__hr {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    height: 1px;
+  }
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__call {
+    position: absolute;
+    right: 6%;
+    top: 30px;
+    @include r(1367) {
+      right: 2%;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 0 7px;
+}
+
+.subscribe {
+  max-width: 93%;
+  background-color: #F3F7F9;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg width='463' height='355' viewBox='0 0 463 355' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_963_4962' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='463' height='355'%3E%3Crect width='463' height='355' rx='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_963_4962)'%3E%3Cpath opacity='0.5' d='M-81.848 -30.5917L-9.96512 0.574939L109.405 20.6545L220.944 44.8473L262.183 87.9907L273.349 123.594L351.515 206.655L365.058 273.953L347.458 339.636L297.935 356.389L199.133 346.48L79.82 359.027L-54.6102 354.582L-143.531 377.344L-190.164 373.648' stroke='%23A0A2A3' stroke-opacity='0.3'/%3E%3Cpath opacity='0.4' d='M-114.663 -76.1917L-30.4617 -39.6746L109.371 -16.1619L240.029 12.1734L288.33 62.7347L301.403 104.464L392.955 201.806L408.807 280.685L388.177 357.677L330.16 377.323L214.42 365.727L74.6483 380.456L-82.8295 375.273L-187 401.969L-241.628 397.646' stroke='%23A0A2A3' stroke-opacity='0.3'/%3E%3Cpath opacity='0.3' d='M-182.689 -170.05L-73.1456 -122.531L108.78 -91.9513L278.768 -55.092L341.6 10.7168L358.601 65.035L477.695 191.732L498.304 294.411L471.448 394.639L395.96 420.226L245.378 405.154L63.5238 424.356L-141.363 417.64L-276.901 452.413L-347.973 446.797' stroke='%23A0A2A3' stroke-opacity='0.3'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &__title {
+    font-size: 3.5rem;
+    color: $purple2;
+    margin-bottom: 5px;
+    @include r(1367) {
+      font-size: 46px;
+    }
+  }
+  &__subtitle {
+    font-size: 1.625rem;
+    margin-bottom: 15px;
+    @include r(1367) {
+      font-size: 22px;
+    }
+  }
+  &__conf.conf {
+    color: $black;
+    margin-bottom: 25px;
+    .conf__input + .conf__pane {
+      border-color: #000;
+    }
+    .conf__input + .conf__pane::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 8L4.25 11.25L14.5 1' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+  }
+  &__input {
+    width: 100%;
+  }
+  &__label {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  &__submit {
+    width: 100%;
+  }
+}
+
+.button-up {
+  background-color: #E2E7F3;
+  border: 1px solid #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  right: 5%;
+  bottom: 40px;
+  opacity: 0;
+  transition: background-color $trns, opacity $trns;
+  @include r(1367) {
+    right: 2%;
+    width: 60px;
+    height: 60px;
+  }
+  @include r(1024) {
+    position: absolute;
+  }
+  &:hover {
+    background-color: #E4E4E4;
+  }
+  &.is-show {
+    opacity: 1;
+  }
+}

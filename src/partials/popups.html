@@ -1,0 +1,115 @@
+<!-- Modal -->
+<div class="modal  fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bdrs-30 inner-pd-50">
+      <form action="" class="form popup-form">
+        <button type="button" class="close modal__close btn-reset popup-form__close" data-dismiss="modal"
+                aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="popup-form__inner">
+          <div class="popup-form__info">
+            <p class="popup-form__caption">Оставьте заявку</p>
+            <p class="popup-form__description">Мы свяжемся с вами, ответим
+              на <b>интересующие вопросы</b>
+              и подготовим для вас
+              <b>коммерческое предложение</b></p>
+          </div>
+          <div class="popup-form__checkers">
+            <label for="popup-check-one" class="conf popup-form__check">
+              <input type="checkbox"
+                     class="conf__input "
+                     id="popup-check-one"
+                     checked
+              >
+              <span class="conf__pane"></span>
+              <i>Продвижение и реклама</i>
+            </label>
+            <label for="popup-check-two" class="conf popup-form__check">
+              <input type="checkbox"
+                     class="conf__input "
+                     id="popup-check-two"
+              >
+              <span class="conf__pane"></span>
+              <i>Бесплатный аудит</i>
+            </label>
+            <label for="popup-check-three" class="conf popup-form__check">
+              <input type="checkbox"
+                     class="conf__input"
+                     id="popup-check-three"
+                     checked
+              >
+              <span class="conf__pane"></span>
+              <i>Поддержка сайта</i>
+            </label>
+            <label for="popup-check-four" class="conf popup-form__check">
+              <input type="checkbox"
+                     class="conf__input "
+                     id="popup-check-four"
+                     checked
+              >
+              <span class="conf__pane"></span>
+              <i>Разработка сайта</i>
+            </label>
+            <label for="popup-check-five" class="conf popup-form__check">
+              <input type="checkbox"
+                     class="conf__input "
+                     id="popup-check-five"
+              >
+              <span class="conf__pane"></span>
+              <i>Другое</i>
+            </label>
+          </div>
+        </div>
+        <div class="popup-form__wrapper">
+          <label for="name" class="form__label popup-form__label">
+            <input type="text"
+                   name="name"
+                   id="name"
+                   class="form__input popup-form__input"
+                   placeholder="Введите ваше имя"
+                   required>
+          </label>
+          <label for="phone" class="form__label popup-form__label">
+            <input type="tel"
+                   name="phone"
+                   id="phone"
+                   inputmode="tel"
+                   class="form__input popup-form__input phone-mask"
+                   placeholder="Введите ваш телефон"
+                   required>
+          </label>
+          <label for="email" class="form__label popup-form__label">
+            <input type="email"
+                   name="email"
+                   id="email"
+                   class="form__input popup-form__input"
+                   placeholder="Введите ваш e-mail"
+                   required>
+          </label>
+          <label for="comm">
+            <textarea
+              name="comm"
+              id="comm"
+              class="form__textarea popup-form__textarea"
+              placeholder="Введите ваш комментарий">
+            </textarea>
+          </label>
+          <label for="conf-input-p" class="conf popup-form__conf">
+            <input type="checkbox"
+                   class="conf__input js-enabled-submit"
+                   id="conf-input-p"
+                   checked
+            >
+            <span class="conf__pane"></span>
+            Соглашаюсь с правилами
+            <a href="">обработки данных</a>
+          </label>
+          <button class="btn-reset btn btn_white form__submit popup-form__submit js-form-submit" type="submit">
+            Отправить
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
