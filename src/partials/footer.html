@@ -1,6 +1,6 @@
 <footer class="footer">
-  <div class="container">
-    <div class="row">
+  <div class="container d-none d-md-block">
+    <div class="row row-gap-15">
       <div class="col-lg-5">
         <div class="subscribe bdrs-30 inner-pd-40">
           <p class="subscribe__title">Подпишитесь</p>
@@ -29,7 +29,7 @@
           </form>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-6">
         <div class="footer__col">
           <div class="footer__nav">
             <p class="footer__caption">Клиентам и Партнерам</p>
@@ -45,14 +45,13 @@
               <svg width="215" height="34" class="logo__img">
                 <use xlink:href="assets/img/sprite.svg#logo"></use>
               </svg>
-              <p class="logo__text">Маркетинговое агентство для роста
-                малого&nbsp;бизнеса по всей России</p>
+              <p class="logo__text">Маркетинговое агентство для роста дохода малого бизнеса по всей России</p>
             </a>
             <address class="footer__address footer__contact">101000, г. Москва, Мясницкая ул., 22</address>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 offset-lg-1">
+      <div class="col-lg-3 col-md-6 offset-lg-1">
         <div class="footer__col">
           <div class="footer__nav">
             <p class="footer__caption">Услуги</p>
@@ -77,16 +76,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="footer__copyright">
           <p class="footer__contact">@2024</p>
           <a href="" class="footer__link footer__contact"><b>Политика конфиденциальности</b></a>
         </div>
       </div>
-      <div class="col-lg-3 offset-lg-1">
+      <div class="col-lg-3 offset-lg-1 col-md-3">
         <a href="" class="footer__link footer__contact">Пользовательское соглашение</a>
       </div>
-      <div class="col-lg-3 offset-lg-1">
+      <div class="col-lg-3 offset-lg-1 col-md-3">
         <ul class="social">
           <li class="social__item">
             <a href="" class="social__link">
@@ -99,6 +98,66 @@
             </a>
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container d-md-none">
+    <div class="row">
+      <div class="col-12">
+        <a href="" class="logo footer__logo">
+          <svg width="215" height="34" class="logo__img">
+            <use xlink:href="assets/img/sprite.svg#logo"></use>
+          </svg>
+          <p class="logo__text">Маркетинговое агентство для роста дохода малого бизнеса по всей России</p>
+        </a>
+        <ul class="social">
+          <li class="social__item">
+            <a href="" class="social__link">
+              <img src="assets/img/svg/icon-tlg.svg" alt="" width="30" height="30">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link">
+              <img src="assets/img/svg/icon-wa.svg" alt="" width="30" height="30">
+            </a>
+          </li>
+        </ul>
+        <div class="footer__info">
+          <a href="tel:84994901123" class="footer__phone footer__contact  footer__link mb-2">+7(499) 490-11-23</a>
+          <a href="mailto:hello@nikto.agency" class="footer__email footer__contact footer__link ">hello@nikto.agency</a>
+          <address class="footer__address footer__contact">101000, г. Москва, Мясницкая ул., 22</address>
+
+            <div class="subscribe bdrs-30 inner-pd-40">
+              <p class="subscribe__title">Подпишитесь</p>
+              <p class="subscribe__subtitle">на рассылку наших новостей</p>
+              <form action="" class="subscribe__form">
+                <label for="email-s" class="form__Label subscribe__label">
+                  <input type="email"
+                         name="email"
+                         id="email-s"
+                         class="form__input subscribe__input"
+                         placeholder="Введите вашу почту"
+                         required
+                  >
+                </label>
+                <label for="conf-input-s" class="conf subscribe__conf">
+                  <input type="checkbox"
+                         class="conf__input js-enabled-submit"
+                         id="conf-input-s"
+                         checked
+                  >
+                  <span class="conf__pane"></span>
+                  Соглашаюсь с правилами
+                  <a href="">обработки данных</a>
+                </label>
+                <button class="btn-reset btn btn_purple form__submit subscribe__submit js-form-submit">Подписаться</button>
+              </form>
+            </div>
+          <div class="footer__hr"></div>
+          <a href="" class="footer__link footer__contact mb-3 text-center"><b>Политика конфиденциальности</b></a>
+          <a href="" class="footer__link footer__contact mb-3 text-center">Пользовательское соглашение</a>
+          <p class="footer__contact text-center">@2024</p>
+        </div>
       </div>
     </div>
   </div>

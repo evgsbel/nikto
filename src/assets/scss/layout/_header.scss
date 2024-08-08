@@ -1,5 +1,9 @@
 .header {
   padding-top: 30px;
+  @include r(1024) {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
   &__nav-wrapper {
     display: flex;
     align-items: center;
@@ -9,6 +13,24 @@
     border-radius: 100px;
     background-color: rgba(235, 239, 241, 0.5);
     backdrop-filter: blur(20px);
+    @include r(1024) {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 100%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: .3s all ease;
+      transition: .3s all ease;
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px);
+      &.is-open {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
   }
   &__email {
     justify-content: center;
@@ -36,7 +58,10 @@
     background-color: $purple;
     border: 5px solid transparent;
     transition: all .6s;
-    //box-shadow: 0 0 10px 0px #CD8AFF, 0 0 10px 0 #CD8AFF;
+    @include r(1024) {
+      width: 45px;
+      height: 45px;
+    }
     &:hover {
       animation: shadow .6s 1 ease-in-out;
     }
@@ -54,12 +79,26 @@
 }
 
 .logo {
+  @include r(1024) {
+    margin: 0 auto;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+  }
   &__img {
     margin-bottom: 8px;
+    @include r(1024) {
+      max-width: 137px;
+      margin-bottom: 3px;
+    }
   }
   &__text {
     font-weight: 300;
     font-size: 0.8rem;
+    @include r(1024) {
+      max-width: 166px;
+      font-size: 10px;
+    }
   }
 }
 
@@ -70,6 +109,13 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    @include r(1024) {
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      justify-content: center;
+      align-items: flex-start;
+    }
   }
   &__item {
     position: relative;
@@ -79,6 +125,36 @@
     &:hover {
       color: $purple2;
       text-decoration: underline;
+    }
+  }
+}
+
+.burger {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid $purple2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 0 10px;
+  display: none;
+  @include r(1024) {
+    display: flex;
+  }
+  span {
+    display: inline-block;
+    background-color: $purple2;
+    height: 3px;
+    border-radius: 100px;
+    width: 100%;
+    transition: width $trns;
+    &:nth-child(2) {
+      width: 70%;
+    }
+    &:last-child {
+      width: 40%;
     }
   }
 }

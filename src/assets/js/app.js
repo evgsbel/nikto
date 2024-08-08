@@ -96,33 +96,64 @@ $(() => {
     pagination: {
       el: ".js-rev-slider-pagination",
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
 
-    // breakpoints: {
-    //   0: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 8,
-    //   },
-    //   768: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 24,
-    //   },
-    //   976: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 41,
-    //   },
-    //   1200: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 41,
-    //   },
-    // },
+      },
+      767: {
+        slidesPerView: 1.8,
+
+      },
+      1023: {
+        slidesPerView: 'auto',
+
+      },
+    },
   });
 
+
+  const caseNavSlider = new Swiper(".js-case-nav-sld", {
+    speed: 900,
+    // initialSlide: 1,
+
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".js-case-nav-next",
+      prevEl: ".js-case-nav-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+
+      },
+      768: {
+        slidesPerView: 2,
+
+      },
+    },
+  });
+
+  const resMobSlider = new Swiper(".js-results-mobile-sld", {
+    speed: 900,
+    // initialSlide: 1,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".js-results-mobile-slider-next",
+      prevEl: ".js-results-mobile-slider-prev",
+    },
+    pagination: {
+      el: ".js-results-mobile-slider-pagination",
+    },
+
+  });
+});
+
+$(() => {
   const materialSlider = new Swiper(".js-materials-sld", {
     slidesPerView: "auto",
     spaceBetween: 15,
     speed: 400,
-
-
     observer: true,
     observeParents: true,
     slideToClickedSlide: true,
@@ -138,17 +169,18 @@ $(() => {
       afterInit: function () {
         console.log("afterInit");
         setTimeout(() => {
-          $(".swiper-slide-active").addClass("wide");
+          $(".materials__slide").addClass("wide");
           materialSlider.update(true);
         }, "500");
       },
-      snapGridLengthChange:function(){
-        if( this.snapGrid.length != this.slidesGrid.length ){
+      snapGridLengthChange: function () {
+        if (this.snapGrid.length != this.slidesGrid.length) {
           this.snapGrid = this.slidesGrid.slice(0);
         }
       }
     }
   });
+
   const swiperSlides = document.querySelectorAll(".materials__slide");
 
   materialSlider.on("slideChangeTransitionStart", function (e) {
@@ -162,5 +194,10 @@ $(() => {
     linkElemCurrentSlide.classList.add("wide");
     materialSlider.update(true);
   });
-
 });
+
+//faq
+$('.js-open-faq-text').click(function () {
+  $(this).toggleClass('is-active');
+  $(this).next('p').toggleClass('is-open')
+})

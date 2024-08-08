@@ -82,15 +82,16 @@
 }
 
 .modal-content {
-  background-image: url('../img/modal-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
+
 }
 .modal-dialog {
   position: relative;
   width: 964px;
   max-width: 90%;
+  &_center {
+    text-align: center;
+    width: max-content;
+  }
 }
 .modal {
   &__close {
@@ -119,6 +120,12 @@
   color: #fff;
   padding-top: 40px;
   padding-bottom: 55px;
+  &__content {
+    background-image: url('../img/modal-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+  }
   &__inner {
     display: flex;
     align-items: flex-start;

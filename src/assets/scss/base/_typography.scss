@@ -22,9 +22,8 @@ body {
   @include rmin(1367) {
     font-size: 1.125rem;
   }
-
   @include r(768) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -58,6 +57,9 @@ ul {
   line-height: 1.17;
   @include r(1367) {
     font-size: 3.125rem;
+  }
+  @include r(768) {
+    font-size: 40px;
   }
 }
 

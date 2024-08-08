@@ -20,6 +20,11 @@
       margin-bottom: 0;
     }
   }
+  &__list {
+    @include r(1024) {
+      margin-bottom: 20px;
+    }
+  }
   &__nav-link {
     font-size: 0.875rem;
     transition: color $trns;
@@ -40,6 +45,10 @@
   }
   &__address {
     margin-bottom: 0;
+    @include r(768) {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
   }
   &__link {
     text-decoration: underline;
@@ -47,6 +56,19 @@
   &__logo {
     display: block;
     margin-bottom: 15px;
+    @include r(1024) {
+      margin: 0 0 20px;
+    }
+    @include r(768) {
+      margin-bottom: 30px;
+      svg {
+        max-width: 240px;
+      }
+      .logo__text {
+        max-width: 240px;
+        font-size: 13px;
+      }
+    }
   }
   &__hr {
     margin-top: 40px;
@@ -66,6 +88,9 @@
     @include r(1367) {
       right: 2%;
     }
+    @include r(768) {
+      display: none;
+    }
   }
 }
 
@@ -73,6 +98,9 @@
   display: flex;
   align-items: center;
   gap: 0 7px;
+  @include r(768) {
+    margin-bottom: 20px;
+  }
 }
 
 .subscribe {
@@ -84,6 +112,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @include r(1200) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   &__title {
     font-size: 3.5rem;
     color: $purple2;
@@ -139,6 +171,12 @@
   }
   @include r(1024) {
     position: absolute;
+  }
+  @include r(768) {
+    top: 10px;
+    bottom: auto;
+    width: 50px;
+    height: 50px;
   }
   &:hover {
     background-color: #E4E4E4;
